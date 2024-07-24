@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache
+Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+
+<tiles-definitions>
+    <definition name="baseLayout"
+                template="/WEB-INF/layout/base.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header"
+                       value="/WEB-INF/layout/header.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer"
+                       value="/WEB-INF/layout/footer.jsp" />
+    </definition>
+    <definition name="index" extends="baseLayout">
+        <put-attribute name="title" value="Trang chủ" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/index.jsp" />
+    </definition>
+    <definition name="adminSanPham" extends="baseLayout">
+        <put-attribute name="title" value="Quản Lý Sản Phẩm" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/adminSanPham.jsp" />
+    </definition>
+    <definition name="login" extends="baseLayout">
+        <put-attribute name="title" value="Đăng Nhập" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/login.jsp" />
+    </definition>
+    <definition name="register" extends="baseLayout">
+        <put-attribute name="title" value="Đăng Ký" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/register.jsp" />
+    </definition>
+    <definition name="chiTietSanPham" extends="baseLayout">
+        <put-attribute name="title" value="Chi Tiết Sản Phẩm" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/chiTietSanPham.jsp" />
+    </definition>
+    <definition name="cart" extends="baseLayout">
+        <put-attribute name="title" value="Giỏ Hàng" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/cart.jsp" />
+    </definition>
+    <definition name="homePage" extends="baseLayout">
+        <put-attribute name="title" value="Trang Chủ" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/homePage.jsp" />
+    </definition>
+    
+    <definition name="baseAdminLayout"
+                template="/WEB-INF/layout/baseAdmin.jsp">
+        <put-attribute name="title" value="Quản Lý Hệ Thống" />
+        <put-attribute name="left"
+                       value="/WEB-INF/layout/adminLeft.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer"
+                       value="/WEB-INF/layout/adminFooter.jsp" />
+    </definition>
+    <definition name="danhMucStats" extends="baseAdminLayout">
+        <put-attribute name="title" value="Thống kê sản phẩm theo danh mục" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/danhMucStats.jsp" />
+    </definition>   
+    <definition name="sanPhamStats" extends="baseAdminLayout">
+        <put-attribute name="title" value="Thống kê sản phẩm theo sản phẩm" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/sanPhamStats.jsp" />
+    </definition> 
+    <definition name="sanPhamThangStats" extends="baseAdminLayout">
+        <put-attribute name="title" value="Thống kê doanh thu theo thời gian" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/sanPhamThangStats.jsp" />
+    </definition>
+    
+</tiles-definitions>
